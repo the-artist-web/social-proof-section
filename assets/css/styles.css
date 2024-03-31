@@ -1,0 +1,299 @@
+/*--------------------------------------*\
+  #ROOT
+\*--------------------------------------*/
+
+:root {
+  /**
+    * Colors
+    */
+
+  /* Primary */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /**
+    * Typography
+    */
+
+  /* Body Copy */
+  --Font-Size: 15px;
+
+  /* Font Family */
+  --font-family: "League Spartan", sans-serif;
+}
+
+/*--------------------------------------*\
+#RESET
+\*--------------------------------------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+span { display: block; }
+
+img { height: auto; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--White);
+  font-family: var(--font-family);
+  color: var(--Very-Dark-Magenta);
+}
+
+::selection {
+  background-color: var(--Soft-Pink);
+  color: var(--White);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--White);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Soft-Pink);
+  border-radius: 4px;
+}
+
+/*--------------------------------------*\
+  #DUPLICATE ITEM
+\*--------------------------------------*/
+
+.section { padding-block: 70px; }
+
+.container { padding-inline: 16px; }
+
+/*--------------------------------------*\
+  #IMG BACKGROUND
+\*--------------------------------------*/
+
+.img-bg-pattern-bottom-mobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.img-bg-pattern-top-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.img-bg-pattern-top-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+
+.img-bg-pattern-bottom-desktop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  display: none;
+}
+
+/*--------------------------------------*\
+  #SOCIAL PROOF SECTION
+\*--------------------------------------*/
+
+.social-proof-section .container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 50px;
+}
+
+.social-proof-section .container .social-proof-section-content {
+  text-align: center;
+  display: grid;
+  gap: 50px;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-header {
+  display: grid;
+  gap: 20px;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-header h1 {
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-header p {
+  color: var(--Dark-Grayish-Magenta);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-content-list {
+  grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  gap: 15px;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-content-list .social-proof-section-content-box {
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 15px 35px;
+  border-radius: 12px;
+  display: grid;
+  gap: 15px;
+}
+
+.social-proof-section .container .social-proof-section-content .social-proof-section-content-list .social-proof-section-content-box .star-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box {
+  background-color: var(--Very-Dark-Magenta);
+  color: var(--White);
+  border-radius: 12px;
+  padding: 30px 25px;
+  display: grid;
+  gap: 20px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .social-proof-section-box-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .social-proof-section-box-title img {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .social-proof-section-box-title .social-proof-section-box-title-name {
+  display: grid;
+  gap: 6px;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .social-proof-section-box-title .social-proof-section-box-title-name .h3-2 { 
+  color: var(--Soft-Pink); 
+  font-size: 1.1rem;
+}
+
+.social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .message {
+  color: var(--Light-Grayish-Magenta);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/*--------------------------------------*\
+  #MEDIA
+\*--------------------------------------*/
+
+@media (min-width: 1200px) {
+  /* #DUPLICATE ITEM */
+  .container { padding-inline: 5%; }
+
+  /* #IMG BACKGROUND */
+  .img-bg-pattern-bottom-mobile { display: none; }
+  
+  .img-bg-pattern-top-mobile { display: none; }
+  
+  .img-bg-pattern-top-desktop { display: block; }
+  
+  .img-bg-pattern-bottom-desktop { display: block; }
+
+  /* #SOCIAL PROOF SECTION */
+  .social-proof-section .container {
+    height: 100vh;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 100px;
+  }
+  .social-proof-section .container .social-proof-section-content { 
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left; 
+  }
+
+  .social-proof-section .container .social-proof-section-content .social-proof-section-header h1 {
+    letter-spacing: 1px;
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+  .social-proof-section .container .social-proof-section-content .social-proof-section-header p {
+    font-size: 1.3rem;
+    width: 550px;
+  }
+
+  .social-proof-section .container .social-proof-section-content .social-proof-section-content-list .social-proof-section-content-box {
+    padding: 10px 40px;
+    align-items: center;
+    display: flex;
+    gap: 35px;
+  }
+  .social-proof-section .container .social-proof-section-content .social-proof-section-content-list .content-box-1 { margin-right: 10rem; }
+
+  .social-proof-section .container .social-proof-section-content .social-proof-section-content-list .content-box-2 { 
+    margin-right: 5rem; 
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 5rem;
+  }
+
+  .social-proof-section .container .social-proof-section-content .social-proof-section-content-list .content-box-3 { margin-left: 10rem; }
+
+  .social-proof-section .container .social-proof-section-customar-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+  .social-proof-section .container .social-proof-section-customar-list .customar-box-1 { height: max-content; }
+
+  .social-proof-section .container .social-proof-section-customar-list .customar-box-2 { 
+    height: max-content; 
+    margin-top: 1.5rem;
+  }
+  .social-proof-section .container .social-proof-section-customar-list .customar-box-3 { 
+    height: max-content; 
+    margin-top: 3rem;
+  }
+  .social-proof-section .container .social-proof-section-customar-list .social-proof-section-box {
+    padding: 50px 35px;
+    display: grid;
+    gap: 30px;
+  }
+  .social-proof-section .container .social-proof-section-customar-list .social-proof-section-box .message {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
